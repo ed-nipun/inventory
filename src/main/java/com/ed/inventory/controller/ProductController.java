@@ -13,7 +13,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping
     public String getAllProducts(Model model) {
         model.addAttribute("products", productService.getAllProducts());
         return "product-list";
